@@ -1,4 +1,5 @@
-﻿using System;
+//Calculator console app created to practice c# app development by using Microsoft's guided learning instructions
+using System;
 using System.Xml.XPath;
 
 namespace Calculator
