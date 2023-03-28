@@ -1,3 +1,5 @@
+using Calculator;
+
 namespace NUnitTest
 {
     public class Tests
@@ -5,6 +7,7 @@ namespace NUnitTest
         [SetUp]
         public void Setup()
         {
+            Calculate c1 = new Calculate();
         }
 
         [Test]
