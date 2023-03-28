@@ -7,7 +7,7 @@ namespace NUnitTest
         [SetUp]
         public void Setup()
         {
-            Calculate c1 = new Calculate();
+            Calculate testC1 = new Calculate();
         }
 
         [Test]
