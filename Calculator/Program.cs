@@ -4,7 +4,7 @@ using System.Xml.XPath;
 
 namespace Calculator
 {
-    class Calculator
+    public class Calculate
     {
         public static double DoOperation(double x, double y, string op)
         {
@@ -33,7 +33,7 @@ namespace Calculator
         }
     }
 
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -83,7 +83,7 @@ namespace Calculator
 
                 try
                 {
-                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    result = Calculate.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error!\n");
