@@ -5,7 +5,7 @@ using NUnit.Framework.Internal;
 
 namespace NUnitTest
 {
-    public class Tests
+    public class PassingTests
     {
         //Arrange
         public double a = 6;
@@ -16,6 +16,7 @@ namespace NUnitTest
         {
         }
 
+        [Author("Jonathan Ochoa")]
         [Test]
         public void WhenAddTwoNumbers_ThenReturnSumOfTwoNumbers()
         {
@@ -30,6 +31,7 @@ namespace NUnitTest
 
         }
 
+        [Author("Jonathan Ochoa")]
         [Test]
         public void WhenSubtractTwoNumbers_ThenReturnFirstNumberMinusSecondNumber()
         {
@@ -44,6 +46,7 @@ namespace NUnitTest
 
         }
 
+        [Author("Jonathan Ochoa")]
         [Test]
         public void WhenMultiplyTwoNumbers_ThenReturnMultiplicationOfTwoNumbers()
         {
@@ -58,6 +61,7 @@ namespace NUnitTest
 
         }
 
+        [Author("Jonathan Ochoa")]
         [Test]
         public void WhenDivideTwoNumbers_ThenReturnDivisionOfTwoNumbers()
         {
@@ -70,6 +74,22 @@ namespace NUnitTest
             //Assert
             Assert.AreEqual(expected, actual);
 
+        }
+    }
+
+    //fail test due to illegal argument exception
+    public class FailureTest
+    {
+        [Test]
+        public void WhenDivideByZero_ThrowIllegalArgumentException()
+        {
+            //Arrange
+            double a = 10;
+            double b = 0;
+
+            //Assert
+            Calculate.DoOperation(a, b, "d");
+         
         }
     }
 }
