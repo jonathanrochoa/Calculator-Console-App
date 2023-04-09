@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Calculator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +22,20 @@ namespace CalculatorWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private double firstValue = 0.0;
-        private double secondValue = 0.0;
-        private double result = 0.0;
+        private double firstValue = 0;
+        private double secondValue = 0;
+        private double result = 0;
         private string oper = "";
 
         public bool TextBoxIsEmpty()
         {
-            if (TextBox.Text == "0")
+            if (TextBox.Text == "0" || TextBox.Text == "")
             {
                 return true;
             }
@@ -198,5 +201,38 @@ namespace CalculatorWPF
             oper = "/";
         }
 
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            firstValue = 0.0;
+            secondValue = 0.0;
+            TextBox.Text = "0";
+        }
+
+        private void EqualsButton_Click(object sender, RoutedEventArgs e)
+        {
+            switch (oper)
+            {
+                case "+":
+                    secondValue = double.Parse(TextBox.Text);
+                    result = Calculate.DoOperation(firstValue, secondValue, "+");
+                    TextBox.Text = result.ToString();
+                    break;
+                case "-":
+                    secondValue = double.Parse(TextBox.Text);
+                    result = Calculate.DoOperation(firstValue, secondValue, "-");
+                    TextBox.Text = result.ToString();
+                    break;
+                case "*":
+                    secondValue = double.Parse(TextBox.Text);
+                    result = Calculate.DoOperation(firstValue, secondValue, "*");
+                    TextBox.Text = result.ToString();
+                    break;
+                case "/":
+                    secondValue = double.Parse(TextBox.Text);
+                    result = Calculate.DoOperation(firstValue, secondValue, "/");
+                    TextBox.Text = result.ToString();
+                    break;
+            }
+        }
     }
 }
