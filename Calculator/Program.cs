@@ -12,16 +12,16 @@ namespace Calculator
 
             switch (op)
             {
-                case "a":
+                case "+":
                     result = x + y;
                     break;
-                case "b":
+                case "-":
                     result = x - y;
                     break;
-                case "c":
+                case "*":
                     result = x * y;
                     break;
-                case "d":
+                case "/":
                     if (y != 0)
                     {
                         result = x / y;
