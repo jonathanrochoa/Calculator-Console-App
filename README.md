@@ -8,5 +8,3 @@ GUI Created using Windows WPF.
 
 ![image](https://user-images.githubusercontent.com/49356114/230799129-67f4137f-0090-4505-972a-572a736c368b.png)
 
-
-The calculator app program was developed using the Microsoft tutorial https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console?view=vs-2022
